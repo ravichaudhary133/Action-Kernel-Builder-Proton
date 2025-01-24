@@ -10,15 +10,15 @@ on:
       KERNEL_TREE:
         description: 'Kernel tree URL'
         required: true
-        default: 'https://github.com/carlodandan/android_kernel_realme_sm6225'
+        default: 'https://github.com/smsn-queen-project/android_kernel_samsung_sm8250'
       KERNEL_BRANCH:
         description: 'Kernel tree Branch'
         required: true
-        default: 'lineage-21'
+        default: 'lineage-22.0'
       KERNEL_DEFCONFIG:
         description: 'Kernel defconfig'
         required: true
-        default: 'vendor/sm6225-perf_defconfig'
+        default: 'vendor/samsung/gts7xlwifi.config'
       KERNEL_IMAGE_NAME:
         description: 'Kernel image name'
         required: true
@@ -39,7 +39,7 @@ on:
 jobs:
   build:
     name: Build Kernel by ${{ github.actor }}
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-18.04
     if: github.event.repository.owner.id == github.event.sender.id
     permissions:
       contents: write
