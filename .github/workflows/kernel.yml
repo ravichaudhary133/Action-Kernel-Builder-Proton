@@ -18,7 +18,7 @@ on:
       KERNEL_DEFCONFIG:
         description: 'Kernel defconfig'
         required: true
-        default: 'vendor/samsung/gts7xlwifi.config'
+        default: 'vendor/kona-sec-perf_defconfig'
       KERNEL_IMAGE_NAME:
         description: 'Kernel image name'
         required: true
